@@ -21,6 +21,11 @@ public class GamePanel extends JPanel implements Runnable{
     Time time = new Time();
     KeyInput input = new KeyInput();
 
+    //UI Items
+    UI_Panel sceneItems;
+    UI_Panel files;
+    UI_Panel properties;
+
 
     Thread gameThread;
 
@@ -30,7 +35,6 @@ public class GamePanel extends JPanel implements Runnable{
         this.setDoubleBuffered(true);
         this.addKeyListener(input);
         this.setFocusable(true);
-
 
 
     }
@@ -64,10 +68,23 @@ public class GamePanel extends JPanel implements Runnable{
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        UI_Panel sceneItems = new UI_Panel(
+        sceneItems = new UI_Panel(
                 new Vector2(0, 0),
                 new Vector2((ORIGINAL_SCREEN_SIZE.x/2) - 400, newScreenSize.y),
-                Color.WHITE,
+                new Color(5, 5, 28),
+                g2
+        );
+        files = new UI_Panel(
+                new Vector2(0, 0),
+                new Vector2((ORIGINAL_SCREEN_SIZE.x/2) - 400, newScreenSize.y),
+                new Color(5, 5, 28),
+                g2
+        );
+        properties = new UI_Panel(
+                new Vector2(1345, 0),
+                //new Vector2((ORIGINAL_SCREEN_SIZE.x/2) - 400, newScreenSize.y),
+                new Vector2(9087, 235497989),
+                new Color(5, 5, 28),
                 g2
         );
 

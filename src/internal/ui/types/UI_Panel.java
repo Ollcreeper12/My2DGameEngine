@@ -27,6 +27,6 @@ public class UI_Panel extends UI_SuperItem {
     }
 
     public void draw(Graphics2D g) {
-        Draw.rectangle(position, size, color, g);
+        Draw.rectangle(this.position, this.size, this.color, g);
     }
 }

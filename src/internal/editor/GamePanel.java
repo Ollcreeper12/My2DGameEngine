@@ -74,5 +74,19 @@ public class GamePanel extends JPanel implements Runnable{
                 g2
         );
 
+        Draw.circle(
+                SCREEN_SIZE.half(),
+                30,
+                Color.BLUE,
+                g2
+        );
+
+        Draw.line(
+                new Vector2(50, 0),
+                new Vector2(50, 50),
+                Color.WHITE,
+                g2
+        );
+
     }
 }

@@ -12,7 +12,7 @@ public class Main {
         Window window = new Window();
         window.create(
                 "Prism Engine - V0.0.1",
-                gamePanel.SCREEN_SIZE,
+                gamePanel.ORIGINAL_SCREEN_SIZE,
                 true,
                 gamePanel
         );
